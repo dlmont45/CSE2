@@ -12,7 +12,7 @@
 //      javac HelloClass.java//
 
 //  Define a Class
-    public class HelloClass{
+    public class WelcomeClass{
 
 //  Add main method 
     public static void main(String[] args) {
