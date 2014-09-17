@@ -63,8 +63,8 @@
         milesPerHour = distanceOfTrip/(timeOfTrip/minutesPerHour); //Computing the miles per hour
         
 //  Print outputs
-        System.out.println("The distance was "+(int)(distanceOfTrip*100)/100.0+" miles and took "+timeOfTrip+" minutes.");
-        System.out.println("The average mph was "+(int)(milesPerHour*100)/100.0+" miles per hour."); //multiply and divide by 100
+        System.out.println("The distance was "+(int)(distanceOfTrip*100)/100.0+" miles and took "+timeOfTrip+" minutes."); //Printing the total distance in miles
+        System.out.println("The average mph was "+(int)(milesPerHour*100)/100.0+" miles per hour."); //multiply and divide by 100, average speed
         
         
         
