@@ -37,49 +37,40 @@
         myScanner = new Scanner ( System.in ); //Constructing an instance of the scanner class
 
 //  Begin Code for Bicycle. Input variables
-        System.out.print("Enter the number of seconds of trip:") ;
+        System.out.print("Enter the number of seconds of trip:") ; //Prompt user for number of seconds of trip
         double secondsOfTrip = myScanner.nextDouble();
-        System.out.print("Enter the number of counts of trip:") ;
+        System.out.print("Enter the number of counts of trip:") ; //Prompt user to ender number of counts of trip
         double countsOfTrip = myScanner.nextDouble();
         
 //  Input distances and units
-        double wheelDiameter = 27.0,
-        PI = 3.14159,
-        secondsPerMinute = 60,
+        double wheelDiameter = 27.0, //Declating wheel diameter
+        PI = 3.14159, //PI
+        secondsPerMinute = 60, 
         minutesPerHour = 60,
         inchesPerFoot = 12,
         feetPerMile = 5280;
          secondsOfTrip = 480;
          countsOfTrip = 1561;
-        double feetOfTrip;
-        double distanceOfTrip;
-        double timeOfTrip;
-        double milesPerHour;
+        double feetOfTrip; //Declaring the feet per trip
+        double distanceOfTrip; //Declaring the distance of trip
+        double timeOfTrip; //Declaring the time of trip
+        double milesPerHour; //Declaring the miles per hour
         
 //  Compute the variables
-        feetOfTrip = (wheelDiameter*PI*countsOfTrip)/(inchesPerFoot);
-        distanceOfTrip = feetOfTrip/feetPerMile;
-        timeOfTrip = secondsOfTrip/secondsPerMinute;
-        milesPerHour = distanceOfTrip/(timeOfTrip/minutesPerHour);
+        feetOfTrip = (wheelDiameter*PI*countsOfTrip)/(inchesPerFoot); //Computing feet of trip
+        distanceOfTrip = feetOfTrip/feetPerMile; //Computing distance of trip
+        timeOfTrip = secondsOfTrip/secondsPerMinute; //Computing the time of trip
+        milesPerHour = distanceOfTrip/(timeOfTrip/minutesPerHour); //Computing the miles per hour
         
-//  Print output
+//  Print outputs
         System.out.println("The distance was "+(int)(distanceOfTrip*100)/100.0+" miles and took "+timeOfTrip+" minutes.");
-        System.out.println("The average mph was "+(int)(milesPerHour*100)/100.0+" miles per hour.");
+        System.out.println("The average mph was "+(int)(milesPerHour*100)/100.0+" miles per hour."); //multiply and divide by 100
         
         
         
-        // testtest/test
+                
+                // testtest/test
         
         
-        
-        
-        
-    
-        
-          
-          
-           
-           
-           
             } //End of Method
      } //End of Class
