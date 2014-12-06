@@ -107,57 +107,6 @@ public class PokerOdds{
     } while (answer.equals("Y") || answer.equals("y"));
     }   //End of Method
     
-    public static Boolean exactlyOneDup(int num[]) {
-        int count2 = 0;
-        for (int i = 0; i < 5; i++) {
-            for (int j = i+1; j < 5; j++) {
-                if(num[i] == num[j]) {
-                    count2++;
-                }
-            }
-        }
-        
-        if(count2 == 1) {
-            return true;
-        }
-        else return false;
-        
-        
-    }   //end of Method
-    
-    public static void simulateOdds() {
-        int dupCount [] = new int [13];
-        String suit [] = {"A:\t", "K:\t", "Q:\t","J:\t","10:\t","9:\t","8:\t","7:\t","6:\t","5:\t","4:\t","3:\t","2:\t"};
-        for (int y = 0; y < 10000; y++) {
-            int deck[] = new int [52];
-            for (int i = 0; i <= 51; i++) {
-                deck[i] = i;
-            }
-            int deckMax = 52;
-            int cards[] = {-1,-1,-1,-1,-1};
-            for (int j = 0; j < 5; j++) {
-                int target = (int)(Math.random()*deckMax);
-                int temp = deck[target];
-                cards[j] = temp;
-                deck[target] = deck[deckMax-1];
-                deck[deckMax-1] = -1;
-                deckMax--;
-            }
-            int value [] = new int [5];
-            for (int z = 0; z < 5; z++) {
-                int valueNum = (int)(cards[z]%13);
-                    value[z] = (14-valueNum);
-                    }
-            
-            
-            if (exactlyOneDup(value) == true) {
-                for()
-                
-            }
-            
-                
-        }
-        
-        
-    }//End of Method
+   
+   
 }   //End of Class

@@ -30,44 +30,57 @@ public class Methods{
 
 //  Define Main Method
   public static void main(String [] arg){
-	Scanner scan=new Scanner(System.in);
+	Scanner myScanner=new Scanner(System.in);
 	
 //  Defining int a,b and c	
 	int a,b,c;
 	
 //  Prompting user to enter 3 integers
 	System.out.println("Enter three ints: ");
-	a=getInt(scan);
-	b=getInt(scan);
-	c=getInt(scan);
+	a=getInt(myScanner);
+	b=getInt(myScanner);
+	c=getInt(myScanner);
 	
-//	Begin to write nested methods
-		public static int larger(int a, int b, int c) {
-			int result;
-			if (a > b && a > c)
-				result = a;
-			else if (b > a && b > c)
-				result = b;
-			else if (c > a && c > b)
-				result = c;
-		
-				return result;
-		}
-		
-		public static int ascending(int a, int b, int c) {
-			int result;
-			if (a < b && b < c) 
-				result = true;
-			else 
-				result = false;
-				
-				return results;
-		}
-		
 	System.out.println("The larger of "+a+" and "+b+" is "+larger(a,b));
 	System.out.println("The larger of "+a+", "+b+", and "+c+
                    	" is "+larger(a,larger(b,c)));
 	System.out.println("It is "+ascending(a,b,c)+" that "+a+", "+b+
                    	", and "+c+" are in ascending order");
   } //End of Main Method
+  
+  //	Begin to write methods
+  	public static int getInt(Scanner myScanner) {
+  		int result = 0;
+  		System.out.print("Enter an Int: ");
+  			
+  				if (myScanner.hasNextInt()) {
+  					int Int = myScanner.nextInt();
+  					result = Int;
+  				}
+  				 else {
+  					System.out.print("Please enter an integer: ");
+  				}
+  		return result;
+		}		
+  	
+		public static int larger(int a, int b) {
+			int result;
+			if (a > b) {
+				result = a;
+			}
+			else result = b;
+		
+				return result;
+		}
+		
+		public static Boolean ascending(int a, int b, int c) {
+			Boolean result;
+			if (a < b && b < c) {
+				result = true;
+			}
+			else 
+				result = false;
+				
+				return result;
+		}
 }   // End of Class

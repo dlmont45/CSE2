@@ -43,25 +43,74 @@ import java.util.Scanner;
             c=addDigit(addDigit(c,4),5);
             System.out.println("Add 3, 4, and 5 to "+a+" to get "+c);
             System.out.println("Add 3 to -98 to get: "+addDigit(-98,3));
-/*            c=join(a,b);
+            c=join(a,b);
             System.out.println("Join "+a+" to "+b+" to get "+c);
             System.out.println("Join 87, 42, and 83 to get "+join(87, join(42,83)));
             System.out.println("Join -9 and -90 to get "+join(-9,-90));
-*/            
+            
         }
         
 
 //  Call on Second Method
-        public static int addDigit(int first, int number){
-            int c = (number*1000) + first; 
+        public static int addDigit(int number, int first){
+            int exp = 0;
+            int neg = 0;
+            if(number < 0) {
+                neg = -1;
+            }
+            else if (number > 0) {
+                neg = 1;
+            }
+            
+            int pos = Math.abs(number);
+            
+            
+            if (pos > 10 && pos <100) {
+                exp = 2;
+            }
+            else if (pos > 100 && pos < 1000) {
+                exp = 3;
+            }
+            else if (pos > 1000 && pos < 10000) {
+                exp = 4;
+            }
+            else if (pos > 10000 && pos < 100000) {
+                exp = 5;
+            }
+            int c = (first*((int)Math.pow(10,exp)) + pos)*neg; 
+            
             return c;
         }
         
-        public Static int addDigit((int addDigit(int string, int numberOne)), int numberTwo){
-            int addDigit = (numberOne*10000) + string;
-            return addDigit;
-            int c = addDigit + (numberTwo*100000);
-            return c;
+        public static int join(int first, int second) {
+            String stringNumber1 = String.valueOf(first);
+            String stringNumber2 = String.valueOf(second);
+            
+            if (first < 0 && second < 0) {
+                int abs1 = Math.abs(first);
+                int abs2 = Math.abs(second);
+                
+                String one = String.valueOf(abs1);
+                String two = String.valueOf(abs2);
+                
+                String exceptionResult = one + two;
+                int resultNeg = Integer.parseInt(exceptionResult);
+                return resultNeg;
+            }
+            
+            else {
+            
+                String stringResult = stringNumber1 + stringNumber2;
+            
+                int resultInt = Integer.parseInt(stringResult);
+            
+                return resultInt;
+                
+            }    
+            
+            
         }
+        
+       
 
     }  

@@ -23,6 +23,7 @@
 //
 //  Push Program
 //      javac ArrayMath.java
+import java.util.Arrays;
 //  Define Class
 public class ArrayMath{
     //Define Main Method
@@ -48,7 +49,7 @@ public class ArrayMath{
 
   }
   
-  //Begin Method Array
+  //Begin Method display
   public static String display(double [] x){
     String out="{";
     for(int j=0;j<x.length;j++){
@@ -61,16 +62,17 @@ public class ArrayMath{
   }//End of Method
   
   //Begin Method addArrays
-  public static double addArrays(double [] a, double [] b) {
-      double [] result = new double [];
-      
-      if (a.length == b.length) {
-          for (int i = 0; i < a. length; i++) {
-              result[i] = a[i] + b[i];
-          }
-      }**********HOW DO I ADD THE 0'S???
-      
-      
+  public static double [] addArrays(double [] a, double [] b) {
+      int x = a.length;
+      if (b.length > a.length) {
+          x = b.length;
+      }
+      double [] result = new double [x];
+      for (int i = 0; i < a.length; i++) {
+        if(i < a.length) result[i] += a[i];
+        if(i < b.length) result[i] += b[i];
+      }//**********HOW DO I ADD THE 0'S???
+      return result;
   }//End of Method
   
   //Begin Method equals
@@ -84,6 +86,7 @@ public class ArrayMath{
           }
           return true;
       }
+      else return false;
   }//End of Method
   
 }//End of Class

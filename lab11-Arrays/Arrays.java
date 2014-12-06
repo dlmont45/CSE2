@@ -44,6 +44,7 @@ import java.util.Scanner;
             java.util.Scanner myScanner = new java.util.Scanner(System.in);
             
             int [] number = new int [10];
+            int [] number2 = new int [10];
             int sum = 0;
             
             System.out.print("Enter 10 ints: ");
@@ -51,19 +52,27 @@ import java.util.Scanner;
                 number[i] = myScanner.nextInt();
                 sum += number[i];
             }
+        
             
             int max = number[0];
-            int min = 0;
+            int min = number[0];
             for (int i = 0; i < 10; i++) {
                 if(number[i] > max) {
                     max = number[i];
-                    min = i;
+                }    
+                if(number[i] < min) {
+                    min = number[i];
                 }
             }
             
             System.out.println("The lowest entry is: "+min);
             System.out.println("The highest entry is: "+max);
             System.out.println("The sum is: "+sum);
+            
+            for(int z = 0; z < 10; z++) {
+                System.out.println(number[z]+"   "+number[9-z]);
+            }
+            
             
             
            
